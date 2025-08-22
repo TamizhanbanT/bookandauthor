@@ -13,7 +13,7 @@ router.get("/", authorController.getAll);
 router.get("/:id", authorController.getById);
 
 router.put("/:id", validate(updateAuthorSchema), authorController.update);
-router.put("/bulk/update", authorController.updateMany);
+
 
 router.delete("/:id", authorController.remove);
 router.delete("/bulk/delete", authorController.removeMany);

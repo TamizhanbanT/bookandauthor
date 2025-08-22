@@ -21,9 +21,6 @@ export const updateAuthor = async (id: number, data: UpdateAuthorDto) => {
   return prisma.author.update({ where: { authorId: id }, data });
 };
 
-export const updateManyAuthors = async (ids: number[], data: UpdateAuthorDto) => {
-  return prisma.author.updateMany({ where: { authorId: { in: ids } }, data });
-};
 
 export const deleteAuthor = async (id: number) => {
   return prisma.author.delete({ where: { authorId: id } });

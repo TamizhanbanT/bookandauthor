@@ -47,15 +47,7 @@ export const update = async (req: Request, res: Response) => {
   }
 };
 
-export const updateMany = async (req: Request, res: Response) => {
-  try {
-    const { ids, data } = req.body;
-    const result = await authorService.updateManyAuthors(ids, data);
-    res.json(result);
-  } catch (error: any) {
-    res.status(500).json({ error: error.message });
-  }
-};
+
 
 export const remove = async (req: Request, res: Response) => {
   try {
